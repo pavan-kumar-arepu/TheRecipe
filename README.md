@@ -7,14 +7,6 @@ Welcome to the Recipe App, your gateway to a world of delightful meals! 🍲 Thi
 The Recipe App fetches data from the [MealDB API](https://www.themealdb.com/api.php) to present you with a diverse collection of recipes. The meals are categorized based on different criteria, offering you a delightful culinary exploration.
 
 ## Screenshots
-![Recipe_Descriptiong](https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/7ec13710-1f3c-42ad-9456-74ff694a03b9)
-![RecipeScreen](https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/65a326d5-02c9-44e2-a01a-70289b4665db)
-
-### Recipe with Description
-![Recipe with Description](https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/65a326d5-02c9-44e2-a01a-70289b4665db)
-
-### Recipe Without Description
-![Recipe Without Description](images/RecipeWithoutDescription.png)
 
 <figure>
     <img src="https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/65a326d5-02c9-44e2-a01a-70289b4665db" alt="Recipe Without Description" style="width:45%;">
