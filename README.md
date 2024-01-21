@@ -1,4 +1,4 @@
-**Recipe App**
+## Recipe App
 
 Welcome to the Recipe App, your gateway to a world of delightful meals! 🍲 This app is powered by the MealDB API.
 
