@@ -47,12 +47,8 @@ If you have any suggestions, improvements, or features you'd like to see added, 
 
 ## Author
 
-- **Your Name**
-- **Contact:** your.email@example.com
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+- **Arepu Pavan Kumar**
+- **Contact:** iOSDeveloper.ipa@gmail.com
 
 Happy cooking! 🍽️👩‍🍳👨‍🍳
 
