@@ -11,6 +11,7 @@ The Recipe App fetches data from the [MealDB API](https://www.themealdb.com/api.
 <figure>
     <img src="https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/65a326d5-02c9-44e2-a01a-70289b4665db" alt="Recipe Without Description" style="width:45%;">
     <img src="https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/7ec13710-1f3c-42ad-9456-74ff694a03b9" alt="Recipe with Description" style="width:45%; margin-right: 10px;">
+    <img src="https://github.com/pavan-kumar-arepu/TheRecipe/assets/13812858/e76fe2fe-172f-4d23-b917-8b18c7c6e648" alt="Detailed Recipe" style="width:45%; margin-right: 10px;">
 </figure>
 
 
