@@ -1,6 +1,7 @@
 package com.ppam.therecipe
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,6 +26,7 @@ import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
@@ -39,7 +41,8 @@ val customTextStyle = TextStyle (
 )
 
 @Composable
-fun RecipeScreen(modifier: Modifier = Modifier) {
+fun RecipeScreen(modifier: Modifier = Modifier,
+                 navigateToDetail: (Category) -> Unit) {
     val recipeViewModel: MainViewModel = viewModel()
     val viewState by recipeViewModel.categoriesState
     Box(modifier = Modifier.fillMaxSize()) {
@@ -55,7 +58,8 @@ fun RecipeScreen(modifier: Modifier = Modifier) {
             else ->{
                 // Display Categories
                 CategoriesScreen (
-                    categories = viewState.list
+                    categories = viewState.list,
+                    navigateToDetail
                 )
             }
         }
@@ -63,7 +67,8 @@ fun RecipeScreen(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun CategoriesScreen(categories: List<Category>) {
+fun CategoriesScreen(categories: List<Category>,
+                     navigateToDetail: (Category) -> Unit) {
     Column {
 
         Row(modifier = Modifier.fillMaxWidth(),
@@ -79,7 +84,7 @@ fun CategoriesScreen(categories: List<Category>) {
         LazyVerticalGrid(GridCells.Fixed(2), modifier = Modifier.fillMaxSize()) {
             items(categories) {
                     category ->
-                CategoryItem(category = category)
+                CategoryItem(category = category, navigateToDetail)
             }
         }
     }
@@ -87,10 +92,12 @@ fun CategoriesScreen(categories: List<Category>) {
 }
 
 @Composable
-fun CategoryItem(category: Category) {
+fun CategoryItem(category: Category,
+                 navigateToDetail: (Category) -> Unit) {
     Column(modifier = Modifier
         .padding(8.dp)
-        .fillMaxSize(),
+        .fillMaxSize()
+        .clickable { navigateToDetail(category) },
         horizontalAlignment = Alignment.CenterHorizontally) {
 
         Image(
@@ -107,13 +114,14 @@ fun CategoryItem(category: Category) {
             style = TextStyle(fontWeight = FontWeight.Bold),
             modifier = Modifier.padding(top=4.dp)
         )
-
-        Text(
-            text = category.strCategoryDescription,
-            color = Color.LightGray,
-            style = TextStyle(fontWeight = FontWeight.Bold),
-            maxLines = 5,
-            modifier = Modifier.padding(top=4.dp)
-        )
+//
+//        Text(
+//            text = category.strCategoryDescription,
+//            color = Color.LightGray,
+//            style = TextStyle(fontWeight = FontWeight.Bold),
+//            maxLines = 5,
+//            modifier = Modifier.padding(top=4.dp),
+//            textAlign = TextAlign.Justify
+//        )
     }
 }
