@@ -42,9 +42,9 @@ val customTextStyle = TextStyle (
 
 @Composable
 fun RecipeScreen(modifier: Modifier = Modifier,
+                 viewState: MainViewModel.RecipeState,
                  navigateToDetail: (Category) -> Unit) {
     val recipeViewModel: MainViewModel = viewModel()
-    val viewState by recipeViewModel.categoriesState
     Box(modifier = Modifier.fillMaxSize()) {
         when {
             viewState.loading -> {
@@ -114,14 +114,5 @@ fun CategoryItem(category: Category,
             style = TextStyle(fontWeight = FontWeight.Bold),
             modifier = Modifier.padding(top=4.dp)
         )
-//
-//        Text(
-//            text = category.strCategoryDescription,
-//            color = Color.LightGray,
-//            style = TextStyle(fontWeight = FontWeight.Bold),
-//            maxLines = 5,
-//            modifier = Modifier.padding(top=4.dp),
-//            textAlign = TextAlign.Justify
-//        )
     }
 }
